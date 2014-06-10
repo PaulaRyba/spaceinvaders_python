@@ -1,0 +1,23 @@
+aliens2 = []
+for i in range(10):
+   for j in range(4):
+      aliens2.append(Alien((50 * i - 60,40 + 30 * j), bombs ))
+for i in aliens2:
+   i.states = [ (2,0), (2,2), (-2,0), (2,2) ]
+for i in range(len(aliens2)):
+   aliens2[i].image = pygame.image.load('b.png').convert_alpha()
+
+
+aliens3 = []
+for i in range(10):
+      aliens3.append(Alien((640-(50 * i +10), 80), bombs ))
+for i in aliens3:
+      i.states = [ (-1,0), (1,1), (1,0), (1,1) ]
+for i in range(10):
+      aliens3.append(Alien((50 * i +10, 50), bombs ))
+for i in range(10):
+      aliens3.append(Alien((50 * i +10, 110), bombs )) 
+for i in aliens3:
+      i.image = pygame.image.load('c.png').convert_alpha()
+for i in aliens3:
+      i.p = 100

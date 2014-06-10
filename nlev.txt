@@ -1,0 +1,21 @@
+while nlev < 5:
+	nlev += 1
+        screen2.fill((0,0,0))
+        tekst2 = font2.render("LEVEL " + str(lev), True, (255,0,0) )          
+        screen2.blit( tekst2, (150,150) )
+        sound.stop()
+        pygame.display.update()
+invaders.empty
+if lev == 2:
+        invaders = pygame.sprite.Group(aliens2)
+if lev == 3:
+        invaders = pygame.sprite.Group(aliens3)
+            
+nlev = 0
+wall = []        
+
+               
+for i in range(2+lev):
+	wall.append(Wall((randint(0,600),randint(350,390)),randint(30,60)))
+walls = pygame.sprite.Group(wall)
+score += 10 * lev
